@@ -1,9 +1,23 @@
 <html>
 
-<head>simplejs</head>
+<head>
+	<title>property</title>
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+</head>
 
-<body>
-	これは simplejs/index.html です。aa
+<!-- イベントハンドラ「onLoad」によって、「文書が読み込まれたらこのスクリプトを動作させる」と言う記述 -->
+
+<body onLoad="window.defaultStatus='色の指定'">
+	<!-- window.defaultStatus を使うと、Webブラウザの下の方に表示されるステータスバーに任意の文字列を表示させることができる -->
+	<script type="text/javascript">
+		// fgColor が 本文の文字の色
+		window.document.fgColor = "yellow";
+		// bgColor が 文書の背景の色
+		window.document.bgColor = "green";
+		// このhtml文書が表示されているウィンドウ（window）の、文書（document）の、文字色／背景色（fgColor/bgColor）という指定のやり方です。
+	</script>
+
+	ウィンドウの背景色、本文の文字の色を変更しました。
 </body>
 
 </html>
